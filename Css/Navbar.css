@@ -1,0 +1,119 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Varela', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+
+.navbar-container {
+  background-color: #1a1a1a; 
+  padding: 20px 0;
+  opacity: 0; 
+  transition: opacity 1s ease;
+}
+
+
+.navbar {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.brand a {
+  text-decoration: none;
+  font-size: 1.25rem; 
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+.brand span {
+  font-weight: 300; 
+  opacity: 0.7;
+}
+
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.875rem; 
+  padding: 10px 15px;
+  transition: transform 0.3s;
+}
+
+
+.menu ul li a:hover {
+  transform: scale(1.2);
+}
+
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.25rem; 
+  cursor: pointer;
+  padding-left: 30px; 
+  transition: transform 0.3s;
+}
+
+.icon-btn:hover {
+  transform: scale(1.2);
+}
+
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem; 
+    cursor: pointer;
+  }
+}
+
+
+.follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  mix-blend-mode: difference;
+  z-index: 999;
+}
